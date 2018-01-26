@@ -1,0 +1,9 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "id": "https://example.org/beths-robotics-badge.json",
+  "image": {
+    "id": "https://example.org/beths-robot-badge.png",
+    "caption": "A pretty badge, with many happy trees.",
+    "author": "https://en.wikipedia.org/wiki/Bob_Ross"
+  }
+}

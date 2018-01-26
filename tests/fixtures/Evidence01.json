@@ -1,0 +1,6 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "@type": "Evidence",
+  "id": "https://example.org/beths-robotics-badge.json",
+  "narrative": "This student invented her own type of robot. This included: \n\n  * Working robot arms\n  * Working robot legs"
+}

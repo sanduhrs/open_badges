@@ -1,0 +1,13 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "@type": "BadgeClass",
+  "@language": "en-us",
+  "id": "https://example.org/beths-robotics-badge.json",
+  "name": "Awesome Robotics Badge",
+  "related": [{
+    "@context": "https://w3id.org/openbadges/v2",
+    "@type": "Relation",
+    "@language": "es",
+    "id": "https://example.org/beths-robotics-badge-es.json?l=es"
+  }]
+}

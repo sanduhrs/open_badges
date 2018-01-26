@@ -1,0 +1,11 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "@type": "BadgeClass",
+  "id": "https://example.org/beths-robotics-badge.json",
+  "criteria": {
+    "@context": "https://w3id.org/openbadges/v2",
+    "@type": "Criteria",
+    "id": "https://example.org/robotics-badge.html",
+    "narrative": "To earn the **Awesome Robotics Badge**, students must construct a basic robot.\n\nThe robot must be able to:\n\n  * Move forward and backwards.\n* Pick up a bucket by its handle."
+  }
+}

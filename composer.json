@@ -1,0 +1,23 @@
+{
+    "name": "sanduhrs/openbadges",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Stefan Auditor",
+            "email": "stefan.auditor@erdfisch.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "sanduhrs\\OpenBadges\\": "src"
+        }
+    },
+    "require": {
+        "ml/iri": "^1.1",
+        "torann/json-ld": "^0.0.10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
+}

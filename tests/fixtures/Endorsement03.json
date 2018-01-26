@@ -1,0 +1,14 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "@type": "Endorsement",
+  "id": "https://example.org/endorsement-123.json",
+  "claim": {
+    "id": "https://example.org/robotics-badge.json",
+    "endorsementComment": "This badge and its associated learning material are great examples of beginning robotics education."
+  },
+  "issuer": "https://example.org/issuer-5.json",
+  "verification": {
+    "@context": "https://w3id.org/openbadges/v2",
+    "@type": "HostedBadge"
+  }
+}

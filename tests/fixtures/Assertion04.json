@@ -1,0 +1,14 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "@type": "Assertion",
+  "id": "https://example.org/beths-robotics-badge.json",
+  "evidence": {
+    "@context": "https:\/\/w3id.org\/openbadges\/v2",
+    "@type": "Evidence",
+    "id": "https://example.org/beths-robot-work.html",
+    "name": "My Robot",
+    "description": "A webpage with a photo and a description of the robot the student built for this project.",
+    "narrative": "The student worked very hard to assemble and present a robot. She documented the process with photography and text.",
+    "genre": "ePortfolio"
+  }
+}

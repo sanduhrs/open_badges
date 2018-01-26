@@ -1,0 +1,6 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "@type": "BadgeClass",
+  "id": "https://example.org/beths-robotics-badge.json",
+  "criteria": "https://example.org/robotics-badge.html"
+}

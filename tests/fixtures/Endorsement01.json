@@ -1,0 +1,15 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "@type": "Endorsement",
+  "id": "https://example.org/assertions/123",
+  "claim": {
+    "id": "https://otherissuer.example/1",
+    "email": "contact@otherissuer.example",
+    "endorsementComment": "A great provider of badged learning."
+  },
+  "issuer": "https://example.org/issuer",
+  "verification": {
+    "@context": "https://w3id.org/openbadges/v2",
+    "@type": "HostedBadge"
+  }
+}

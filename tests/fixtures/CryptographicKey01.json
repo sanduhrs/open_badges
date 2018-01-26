@@ -1,0 +1,7 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "@type": "CryptographicKey",
+  "id": "https://example.org/publicKey.json",
+  "owner": "https://example.org/organization.json",
+  "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBG0BA...OClDQAB\n-----END PUBLIC KEY-----\n"
+}
