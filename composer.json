@@ -14,8 +14,8 @@
         }
     },
     "require": {
-        "ml/iri": "^1.1",
-        "torann/json-ld": "^0.0.10"
+        "torann/json-ld": "*",
+        "ml/iri": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
