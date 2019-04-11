@@ -13,6 +13,7 @@ class VerificationObject extends AbstractContext
      */
     protected $structure = [
         '@context' => 'https://w3id.org/openbadges/v2',
+        'type' => null,
         'verificationProperty' => 'id',
         'startsWith' => null,
         'allowedOrigins' => null,

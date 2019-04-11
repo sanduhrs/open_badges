@@ -19,6 +19,7 @@ class Assertion extends AbstractContext
      */
     protected $structure = [
         '@context' => 'https://w3id.org/openbadges/v2',
+        'type' => null,
         'id' => null,
         'recipient' => IdentityObject::class,
         'badge' => BadgeClass::class,

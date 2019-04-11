@@ -15,6 +15,17 @@ class VerificationObject implements JsonSerializable
     use Serializer;
 
     /**
+     * Type.
+     *
+     * Valid JSON-LD representation of the Assertion type. In most cases, this will simply be the string Assertion. An
+     * array including Assertion and other string elements that are either URLs or compact IRIs within the current
+     * context are allowed.
+     *
+     * @type string
+     */
+    protected $type;
+
+    /**
      * The @id of the property to be used for verification.
      *
      * The @id of the property to be used for verification that an Assertion is
@@ -60,6 +71,25 @@ class VerificationObject implements JsonSerializable
                 $this->{"set" . ucfirst($name)}($value);
             }
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     *
+     * @return VerificationObject
+     */
+    public function setType($type)
+    {
+        $this->type= $type;
+        return $this;
     }
 
     /**

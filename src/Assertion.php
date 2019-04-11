@@ -26,23 +26,34 @@ class Assertion implements JsonSerializable
     protected $id;
 
     /**
+     * Type.
+     *
+     * Valid JSON-LD representation of the Assertion type. In most cases, this will simply be the string Assertion. An
+     * array including Assertion and other string elements that are either URLs or compact IRIs within the current
+     * context are allowed.
+     *
+     * @type string
+     */
+    protected $type;
+
+    /**
      * The recipient of the achievement.
      *
-     * @var \sanduhrs\OpenBadges\IdentityObject
+     * @var IdentityObject
      */
     protected $recipient;
 
     /**
      * A document that describes the type of badge being awarded.
      *
-     * @var \sanduhrs\OpenBadges\BadgeClass
+     * @var BadgeClass
      */
     protected $badge;
 
     /**
      * Instructions for third parties to verify this assertion.
      *
-     * @var \sanduhrs\OpenBadges\VerificationObject
+     * @var VerificationObject
      */
     protected $verification;
 
@@ -56,14 +67,14 @@ class Assertion implements JsonSerializable
     /**
      * A document representing an image representing this user’s achievement.
      *
-     * @var \sanduhrs\OpenBadges\Image
+     * @var Image
      */
     protected $image;
 
     /**
      * A document describing the work the recipient did to earn the achievement.
      *
-     * @var \sanduhrs\OpenBadges\Evidence
+     * @var Evidence
      */
     protected $evidence;
 
@@ -111,7 +122,9 @@ class Assertion implements JsonSerializable
      */
     public function __construct($parameters = [])
     {
-        $parameters += [];
+        $parameters += [
+            "type" => "Assertion",
+        ];
         foreach ($parameters as $name => $value) {
             if (method_exists($this, "set" . ucfirst($name))) {
                 $this->{"set" . ucfirst($name)}($value);
@@ -135,6 +148,25 @@ class Assertion implements JsonSerializable
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     *
+     * @return Assertion
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
         return $this;
     }
 

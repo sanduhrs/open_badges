@@ -13,6 +13,7 @@ class HostedBadge extends VerificationObject
      */
     protected $structure = [
         '@context' => 'https://w3id.org/openbadges/v2',
+        'type' => null,
         'id' => null,
     ];
 }

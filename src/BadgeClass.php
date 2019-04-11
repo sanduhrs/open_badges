@@ -27,6 +27,17 @@ class BadgeClass implements JsonSerializable
     protected $id;
 
     /**
+     * Type.
+     *
+     * Valid JSON-LD representation of the Assertion type. In most cases, this will simply be the string Assertion. An
+     * array including Assertion and other string elements that are either URLs or compact IRIs within the current
+     * context are allowed.
+     *
+     * @type string
+     */
+    protected $type;
+
+    /**
      * The name of the achievement.
      *
      * @var string
@@ -99,7 +110,9 @@ class BadgeClass implements JsonSerializable
      */
     public function __construct($parameters = [])
     {
-        $parameters += [];
+        $parameters += [
+            "type" => "BadgeClass",
+        ];
         foreach ($parameters as $name => $value) {
             if (method_exists($this, "set" . ucfirst($name))) {
                 $this->{"set" . ucfirst($name)}($value);
@@ -123,6 +136,25 @@ class BadgeClass implements JsonSerializable
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     *
+     * @return BadgeClass
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
         return $this;
     }
 

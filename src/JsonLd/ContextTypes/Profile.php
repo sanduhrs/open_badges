@@ -17,6 +17,7 @@ class Profile extends AbstractContext
     protected $structure = [
         '@context' => 'https://w3id.org/openbadges/v2',
         'id' => null,
+        'type' => null,
         'name' => null,
         'url' => null,
         'telephone' => null,
@@ -27,4 +28,20 @@ class Profile extends AbstractContext
         'verification' => VerificationObject::class,
         'revocationList' => RevocationList::class,
     ];
+
+    /**
+     * Profile constructor.
+     *
+     * @param array $parameters
+     */
+    public function __construct($parameters = [])
+    {
+        parent::__construct($parameters);
+        $parameters += [];
+        foreach ($parameters as $name => $value) {
+            if (method_exists($this, "set" . ucfirst($name))) {
+                $this->{"set" . ucfirst($name)}($value);
+            }
+        }
+    }
 }

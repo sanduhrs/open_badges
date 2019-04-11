@@ -2,6 +2,7 @@
 
 namespace sanduhrs\OpenBadges;
 
+use JsonLd\ContextTypes\AbstractContext;
 use sanduhrs\OpenBadges\JsonLd\Serializer;
 use JsonSerializable;
 
@@ -22,6 +23,17 @@ class Profile implements JsonSerializable
      * @type string
      */
     protected $id;
+
+    /**
+     * Type.
+     *
+     * Valid JSON-LD representation of the Assertion type. In most cases, this will simply be the string Assertion. An
+     * array including Assertion and other string elements that are either URLs or compact IRIs within the current
+     * context are allowed.
+     *
+     * @type string
+     */
+    protected $type;
 
     /**
      * The name of the entity or organization.
@@ -102,7 +114,9 @@ class Profile implements JsonSerializable
      */
     public function __construct($parameters = [])
     {
-        $parameters += [];
+        $parameters += [
+            "type" => "Profile",
+        ];
         foreach ($parameters as $name => $value) {
             if (method_exists($this, "set" . ucfirst($name))) {
                 $this->{"set" . ucfirst($name)}($value);
@@ -126,6 +140,25 @@ class Profile implements JsonSerializable
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     *
+     * @return Profile
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
         return $this;
     }
 
