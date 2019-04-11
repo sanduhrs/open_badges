@@ -13,7 +13,7 @@ class RevokedAssertion extends AbstractContext
      */
     protected $structure = [
         '@context' => 'https://w3id.org/openbadges/v2',
-        '@type' => 'Assertion',
+        'type' => null,
         'id' => null,
         'uid' => null,
         'revoked' => null,
