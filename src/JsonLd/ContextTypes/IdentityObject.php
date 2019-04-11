@@ -14,6 +14,7 @@ class IdentityObject extends AbstractContext
     protected $structure = [
         '@context' => 'https://w3id.org/openbadges/v2',
         'identity' => null,
+        'type' => null,
         // Type may be one of email, url, telephone.
         // @see https://www.imsglobal.org/sites/default/files/Badges/OBv2p0/index.html#profile-identifier-properties
         'hashed' => null,
