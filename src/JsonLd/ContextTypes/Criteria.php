@@ -13,7 +13,7 @@ class Criteria extends AbstractContext
      */
     protected $structure = [
         '@context' => 'https://w3id.org/openbadges/v2',
-        'id' => 'theid',
-        'narrative' => 'thenarrative',
+        'id' => null,
+        'narrative' => null,
     ];
 }
