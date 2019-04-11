@@ -1,5 +1,6 @@
 {
     "name": "sanduhrs/open_badges",
+    "description": "Mozilla Open Badges library with JSON-LD support.",
     "type": "library",
     "license": "GPL",
     "authors": [
@@ -14,6 +15,7 @@
         }
     },
     "require": {
+        "ext-json": "*",
         "torann/json-ld": "*",
         "ml/iri": "^1.1"
     },
