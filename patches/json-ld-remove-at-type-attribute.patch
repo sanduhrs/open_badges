@@ -1,0 +1,12 @@
+diff --git a/src/ContextTypes/AbstractContext.php b/src/ContextTypes/AbstractContext.php
+index e958c5c..8ed466e 100644
+--- a/src/ContextTypes/AbstractContext.php
++++ b/src/ContextTypes/AbstractContext.php
+@@ -85,7 +85,6 @@ abstract class AbstractContext implements ContextTypeInterface
+         // Set properties
+         $properties = array_merge([
+             '@context' => 'http://schema.org',
+-            '@type' => $this->type,
+             'sameAs' => null
+         ], $this->structure, $this->extendStructure);
+ 
