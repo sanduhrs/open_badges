@@ -46,6 +46,9 @@ class IdentityObject implements JsonSerializable
         $parameters += [
           'hashed' => false,
         ];
+
+        $this->setHashed($parameters['hashed']);
+
         foreach ($parameters as $name => $value) {
             if (method_exists($this, "set" . ucfirst($name))) {
                 $this->{"set" . ucfirst($name)}($value);
@@ -78,7 +81,12 @@ class IdentityObject implements JsonSerializable
      */
     public function setIdentity($identity)
     {
-        $this->identity = $this->hash($identity);
+        if ($this->isHashed()) {
+            $this->identity = $this->hash($identity);
+        }
+        else {
+            $this->identity = $identity;
+        }
         return $this;
     }
 
