@@ -1,19 +1,20 @@
 {
   "@context": "https://w3id.org/openbadges/v2",
   "@type": "Assertion",
+  "type": "Assertion",
   "id": "https://example.org/beths-robotics-badge.json",
   "recipient": {
     "@context": "https://w3id.org/openbadges/v2",
     "@type": "IdentityObject",
     "identity": "sha256$766b410fe08c7616e44d9e06144e002e039ca3e4bb777d1676ae5b411e8fe7f5",
-    "type": "email",
     "hashed": true,
     "salt": "deadsea"
   },
   "badge": "https://example.org/robotics-badge.json",
   "verification": {
     "@context": "https://w3id.org/openbadges/v2",
-    "@type": "HostedBadge"
+    "@type": "HostedBadge",
+    "type": "hosted"
   },
   "issuedOn": "2016-12-31T23:59:59Z",
   "image": "https://example.org/beths-robot-badge.png",

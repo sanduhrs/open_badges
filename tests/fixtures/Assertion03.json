@@ -2,5 +2,6 @@
   "@context": "https://w3id.org/openbadges/v2",
   "@type": "Assertion",
   "id": "https://example.org/beths-robotics-badge.json",
+  "type": "Assertion",
   "evidence": "https://example.org/beths-robot-work.html"
 }
